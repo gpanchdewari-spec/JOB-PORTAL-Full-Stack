@@ -1,4 +1,4 @@
-# JobFlow — MERN Job Portal
+# NexoraHire — MERN Job Portal
 
 A portfolio-ready full-stack job portal built to demonstrate real MERN development: authentication, authorization, CRUD, search, dashboards, file upload and a multi-role application workflow.
 
@@ -140,17 +140,6 @@ After configuring MongoDB, from `backend/` run:
 npm run seed
 ```
 
-Demo accounts:
-
-```text
-Recruiter
-recruiter@example.com
-password123
-
-Candidate
-candidate@example.com
-password123
-```
 
 The seeded candidate intentionally does not contain a fake resume URL. Upload a real PDF from the candidate dashboard before applying.
 
@@ -207,23 +196,3 @@ PATCH  /api/applications/:id/status
 4. `protect` verifies the JWT and loads the user from MongoDB.
 5. `allowRoles("candidate")` / `allowRoles("recruiter")` blocks unauthorized roles.
 
-For a higher-security production deployment, prefer an HTTP-only secure cookie-based token strategy rather than long-lived tokens in localStorage.
-
-## Suggested next improvements
-
-After you understand the current code, good upgrades are:
-- Refresh-token + HTTP-only cookies
-- Email verification / forgot password
-- Saved jobs
-- Recruiter job editing UI (backend route already exists)
-- Pagination controls in frontend
-- Admin role/dashboard
-- Socket.IO notifications/chat
-- Interview scheduling
-- Automated tests
-- Docker
-- CI/CD
-
-## Portfolio tip
-
-Do not upload the ZIP itself to GitHub. Extract it, understand the code, change the branding/content, make several meaningful commits, deploy the frontend/backend and add screenshots + live links to your README.
